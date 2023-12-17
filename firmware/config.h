@@ -24,7 +24,7 @@ here, the number of units defaults to 4. */
    (Undef to disable, or set to the number of desired bookmarks - a reasonable
    range would be between 4 and 16 */
 
-#undef CONFIG_FILEBOOKMARKS 6
+#define CONFIG_FILEBOOKMARKS 6
 
 /* Keyboard-based Joystick emulation */
 #define CONFIG_JOYKEYS
@@ -43,7 +43,7 @@ here, the number of units defaults to 4. */
 #define ROM_REQUIRED
 #define ROM_FILENAME "ORIC    ROM"
 /* Do we support configuration files? */
-#define CONFIG_SETTINGS
+#undef CONFIG_SETTINGS
 #define CONFIG_SETTINGS_FILENAME "ORIC    CFG" 
 
 #endif

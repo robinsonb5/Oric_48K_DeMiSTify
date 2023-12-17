@@ -202,6 +202,7 @@ pll pll (
 	.inclk0	 (CLOCK_27   ),
 	.c0       (clk_24     ),
 	.c1       (clk_72     ),
+	.c2       (SDRAM_CLK  ),
 	.locked   (pll_locked )
 	);
 user_io #(.STRLEN($size(CONF_STR)>>3), .SD_IMAGES(2), .FEATURES(32'h0 | (BIG_OSD << 13) | (HDMI << 14))) user_io
@@ -474,8 +475,6 @@ progressbar #(.X_OFFSET(66), .Y_OFFSET(36)) progressbar (
 	.pix(progress)
 );
 
-
-assign      SDRAM_CLK = ~clk_72;
 assign      SDRAM_CKE = 1;
 
 sdram #(72) sdram(
